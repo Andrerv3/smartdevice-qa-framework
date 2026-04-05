@@ -1,0 +1,1 @@
+# smartdevice-qa-framework
