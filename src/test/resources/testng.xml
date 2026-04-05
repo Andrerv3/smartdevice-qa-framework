@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    testng.xml — orquestador de la suite de tests.
+
+    Este archivo define QUÉ tests se ejecutan, en QUÉ ORDEN
+    y con qué CONFIGURACIÓN de paralelismo.
+
+    En entrevistas: "TestNG me permite organizar los tests en
+    suites y grupos, controlar el orden de ejecución y configurar
+    paralelismo sin cambiar el código de los tests."
+-->
+<suite name="SmartDevice QA Suite" verbose="1" parallel="none">
+
+    <!-- Parámetros globales disponibles en todos los tests -->
+    <parameter name="environment" value="qa"/>
+
+    <!-- ─── GRUPO 1: Tests de API ─── -->
+    <test name="API Tests — JSONPlaceholder">
+        <groups>
+            <run>
+                <include name="api"/>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.smartdevice.api"/>
+        </packages>
+    </test>
+
+    <!-- ─── GRUPO 2: Tests de UI ─── -->
+    <test name="UI Tests — SauceDemo">
+        <groups>
+            <run>
+                <include name="ui"/>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.smartdevice.ui"/>
+        </packages>
+    </test>
+
+</suite>

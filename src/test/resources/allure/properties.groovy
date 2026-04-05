@@ -1,0 +1,4 @@
+package allure
+
+class properties {
+}

@@ -1,0 +1,25 @@
+# ─── Maven ───────────────────────────────────
+target/
+*.class
+
+# ─── IntelliJ ────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# ─── Allure (resultados crudos, no el reporte) 
+allure-results/
+allure-report/
+
+# ─── Sistema operativo ───────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Logs ────────────────────────────────────
+*.log
+logs/
+
+# ─── Variables de entorno sensibles ──────────
+.env
+*.env
